@@ -1,4 +1,4 @@
-# ocicontinst-bluegreen-fn
+## ocicontinst-bluegreen-fn
 
 - This  project helps updates perform  Scaling , Update Container Images , Switch between Blue-Green OCI Conatiner Instance
  
@@ -10,7 +10,7 @@ https://github.com/Umashankar-S/ocicontinst-bluegreen  -> Deploys the OCI Contai
   - func.py
   - requirements.txt
 
-######## Prerequisites
+## Prerequisites
 
 1. Required IAM Policies and Group
 
@@ -53,7 +53,7 @@ Allow dynamic-group <identity_domain_name>/<dynamic-group-name> to manage  load-
 
 
 
-############ Deploy  the Function
+## Deploy  the Function
 
 1. Clone the repo to a local directory
    
