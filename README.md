@@ -24,6 +24,7 @@ Allow dynamic-group <identity_domain_name>/<group-name> to manage virtual-networ
 
 
 allow service FAAS to use virtual-network-family in compartment id <comp_ocid>
+
 allow service FAAS to manage repos in compartment id <comp_ocid>
 
 Allow dynamic-group <identity_domain_name>/<dynamic-group-name> to manage function-family in compartment id <comp_ocid>
@@ -78,18 +79,26 @@ Allow dynamic-group <identity_domain_name>/<dynamic-group-name> to manage  load-
 -  Copy the  func.py and requirements.txt from the repo folder to  this function's folder  
 
    cp <local_repo_folder>/func.py ci_update/
+
+
    cp <local_repo_folder>/requirements.txt ci_update/
 
 
    Optionally  run compile to catch the errors in python code 
 
    cd ci_update 
+
+
    python -m py_compile func.py
+
 
 -  fn -v deploy --app ci_update ci_update
 
 
 - Please do enable logging for the function from OCI Console, helps in debugging invokation logs 
+
+- Please have the Synchronous invocation timeout (in seconds) to 300 sec for the function
+
 
 
 5. Functions Invoke 
