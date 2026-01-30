@@ -5,7 +5,8 @@
  NOTE : Import point is  this function uses the  repo : https://github.com/Umashankar-S/ocicontinst-bluegreen  as base ,
 
 https://github.com/Umashankar-S/ocicontinst-bluegreen  -> Deploys the OCI Container Instance as blue green deployment
-- This project has the OCI function's requirement 
+
+- This project has the OCI function's related files : 
   - func.py
   - requirements.txt
 
@@ -15,6 +16,7 @@ https://github.com/Umashankar-S/ocicontinst-bluegreen  -> Deploys the OCI Contai
 
 
 Allow dynamic-group <identity_domain_name>/<group-name> to manage function-family in compartment id <comp_ocid>
+
 Allow dynamic-group <identity_domain_name>/<group-name> to manage virtual-network-family in compartment id <comp_ocid>
 
 
@@ -25,8 +27,11 @@ allow service FAAS to use virtual-network-family in compartment id <comp_ocid>
 allow service FAAS to manage repos in compartment id <comp_ocid>
 
 Allow dynamic-group <identity_domain_name>/<dynamic-group-name> to manage function-family in compartment id <comp_ocid>
+
 Allow dynamic-group <identity_domain_name>/<dynamic-group-name> to use virtual-network-family in compartment id <comp_ocid>
+
 Allow dynamic-group <identity_domain_name>/<dynamic-group-name> to manage orm-family in compartment id  <comp_ocid> 
+
 Allow dynamic-group <identity_domain_name>/<dynamic-group-name> to use repos in compartment id  <comp_ocid>
 
 
@@ -37,6 +42,7 @@ Allow dynamic-group <identity_domain_name>/<dynamic-group-name> to manage functi
 Allow dynamic-group <identity_domain_name>/<dynamic-group-name> to manage orm-family in compartment id  <comp_ocid> 
 
 Allow dynamic-group <identity_domain_name>/<dynamic-group-name> to manage compute-container-family in compartment id  <comp_ocid>
+
 Allow dynamic-group <identity_domain_name>/<dynamic-group-name> to manage repos in compartment id  <comp_ocid>
 
 Allow dynamic-group <identity_domain_name>/<dynamic-group-name> to use log-content in compartment id  <comp_ocid>
@@ -66,16 +72,22 @@ Allow dynamic-group <identity_domain_name>/<dynamic-group-name> to manage  load-
 4.  Next is  Section  E - Create, deploy, and invoke your function [ Reference  https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsquickstartocicomputeinstance.htm ]
 
 -  fn init --runtime python ci_update 
+
    Here  ci_update is Application Name and as well function name  
+
 -  Copy the  func.py and requirements.txt from the repo folder to  this function's folder  
+
    cp <local_repo_folder>/func.py ci_update/
    cp <local_repo_folder>/requirements.txt ci_update/
 
+
    Optionally  run compile to catch the errors in python code 
+
    cd ci_update 
    python -m py_compile func.py
 
 -  fn -v deploy --app ci_update ci_update
+
 
 - Please do enable logging for the function from OCI Console, helps in debugging invokation logs 
 
