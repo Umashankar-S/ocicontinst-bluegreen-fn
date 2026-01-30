@@ -2,9 +2,9 @@
 
 - This  project helps updates perform  Scaling , Update Container Images , Switch between Blue-Green OCI Conatiner Instance
  
- NOTE : Import point is  this repo uses the  repo : https://github.com/Umashankar-S/ocicontinst-bluegreen  ,
-  which is the  base for deployment of OCI Container instances  with  Blue Green deployment architecture 
+ NOTE : Import point is  this function uses the  repo : https://github.com/Umashankar-S/ocicontinst-bluegreen  as base ,
 
+https://github.com/Umashankar-S/ocicontinst-bluegreen  -> Deploys the OCI Container Instance as blue green deployment
 - This project has the OCI function's requirement 
   - func.py
   - requirements.txt
@@ -50,7 +50,7 @@ Allow dynamic-group <identity_domain_name>/<dynamic-group-name> to manage  load-
 
 1. Clone the repo to a local directory
    
-    git clone https://github.com/Umashankar-S/ocicontinst-bluegreen.git
+    git clone https://github.com/Umashankar-S/ocicontinst-bluegreen-fn 
     
     
 2. Follow the Function Quick start Guide :  https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsquickstartguidestop.htm
